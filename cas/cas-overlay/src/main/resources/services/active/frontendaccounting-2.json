@@ -1,0 +1,32 @@
+{
+  "@class" : "org.apereo.cas.services.OidcRegisteredService",
+  "clientId": "frontend-accounting",
+  "clientSecret": "xtWGZPMhCyse3GSG9uOqRLSqEYsK12bpFrQbm6hfXjFtwP6V",
+  "serviceId" : "^http://localhost:4200/.*",
+  "scopes" : [ "java.util.HashSet",
+    [ "openid", "email" , "customscope"]
+  ],
+  "usernameAttributeProvider" : {
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider"
+  },
+  "accessStrategy" : {
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled" : true,
+    "ssoEnabled" : true
+  },
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  },
+//  "attributeReleasePolicy" : {
+//    "@class" : "org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy",
+//    "allowedAttributes" : [ "java.util.ArrayList", [ "id", "email", "username" ] ],
+//    "principalAttributesRepository" : {
+//      "@class" : "org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository"
+//    }
+//  },
+  "name" : "Frontend-Accounting Demo",
+  "theme" : "apereo",
+  "id" : 2,
+  "description" : "Frontend-Accounting Demo",
+  "evaluationOrder" : 1
+}

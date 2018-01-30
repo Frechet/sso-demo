@@ -1,0 +1,27 @@
+<div class="form-group">
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="user.email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" [(ngModel)]="user.password">
+  </div>
+  <div class="form-group">
+    <label for="first-name">Username:</label>
+    <input type="text" class="form-control" id="first-name" [(ngModel)]="user.username">
+  </div>
+  <div class="form-group">
+    <label for="last-name">Phone:</label>
+    <input type="text" class="form-control" id="last-name" [(ngModel)]="user.phone">
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" (click)="saveNewUser()">
+      Save
+    </button>
+    <!--<button type="button" class="btn btn-primary" (click)="login()">-->
+      <!--Login-->
+    <!--</button>-->
+  </div>
+</div>
+

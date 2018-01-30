@@ -1,0 +1,9 @@
+info:
+  description: CAS Configuration
+
+custom:
+  authn:
+    vkontakte:
+      id: vk_client_id
+      secret: vk_client_secret
+      clientName: Vkontakte

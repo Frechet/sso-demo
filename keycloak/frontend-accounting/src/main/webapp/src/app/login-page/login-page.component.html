@@ -1,0 +1,18 @@
+<div>
+  <div  style="max-width: 400px;">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="user.username">
+    </div>
+    <div style="padding-top: 15px">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" [(ngModel)]="user.password">
+    </div>
+    <div style="padding-top: 15px">
+      <button type="button" class="btn btn-primary" (click)="login()">
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+

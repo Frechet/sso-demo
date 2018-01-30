@@ -1,0 +1,19 @@
+{
+  "@class" : "org.apereo.cas.support.oauth.services.OAuthRegisteredService",
+  "serviceId" : "^http://localhost:8090/.*",
+  "clientId" : "backend",
+  "clientSecret": "xtWGZPMhCyse3GSG9uOqRLSqEYsK12bpFrQbm6hfXjFtwP6V",
+  "accessStrategy" : {
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled" : true,
+    "ssoEnabled" : true
+  },
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  },
+  "name" : "Backend Demo",
+  "theme" : "apereo",
+  "id" : 1,
+  "description" : "Backend Demo",
+  "evaluationOrder" : 1
+}

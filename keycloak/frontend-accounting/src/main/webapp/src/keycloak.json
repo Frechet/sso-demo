@@ -1,0 +1,9 @@
+{
+  "realm": "prototype",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "prototype-accounting",
+  "public-client": true,
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}

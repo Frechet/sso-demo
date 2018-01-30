@@ -1,0 +1,32 @@
+<div *ngIf="user">
+  <table class="table-striped">
+    <tr>
+      <td><strong>Id: </strong></td>
+      <td>{{user.id}}</td>
+    </tr>
+    <tr>
+      <td><strong>Email: </strong></td>
+      <td>{{user.email}}</td>
+    </tr>
+    <tr>
+      <td><strong>Password: </strong></td>
+      <td>{{user.password}}</td>
+    </tr>
+    <tr>
+      <td><strong>Username: </strong></td>
+      <td>{{user.username}}</td>
+    </tr>
+    <tr>
+      <td><strong>Phone: </strong></td>
+      <td>{{user.phone}}</td>
+    </tr>
+  </table>
+</div>
+<div style="padding-top: 15px">
+  <button type="button" class="btn btn-primary" (click)="update()">
+    Update
+  </button>
+  <button type="button" class="btn btn-primary" (click)="logout()">
+    Logout
+  </button>
+</div>

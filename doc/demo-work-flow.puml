@@ -1,0 +1,39 @@
+@startuml
+
+actor user
+participant "frontend-registration"
+participant "frontend-accounting"
+participant SSO <<Single sign-on>>
+participant backend
+database DB
+
+
+user->"frontend-registration" : Зарегистрировать нового пользователя <b>user</b>
+"frontend-registration"->SSO : Авторизация клиента с правами <b>publicUser</b>
+note left
+<b>publicUser</b>
+Пользователь используемый 
+для аннонимных запросов
+end note
+SSO->DB : Идентификация пользователя <b>publicUser</b>
+SSO-->"frontend-registration" : access_token и id_token
+"frontend-registration"->backend : Сохранить нового пользователя <b>user</b>
+backend-->"frontend-registration" : Результат сохранения нового пользователя <b>user</b>
+user->"frontend-accounting": Авторизация пользователя <b>user</b>
+"frontend-accounting"->SSO : Авторизация клиента с правами <b>user</b>
+SSO->DB : Идентификация пользователя <b>user</b>
+SSO-->"frontend-accounting" : access_token и id_token
+note left
+Получаем <b>id</b> пользователя <b>user</b> из id_token
+end note
+"frontend-accounting"->backend : Получить доступ к ресурсу для пользователя <b>user</b> и по <b>id</b> запросить данные
+note right
+Бэкенд вытаскивает роль пользователя <b>user</b>
+из токена и идентифицирует его доступ к ресурсу контроллера
+предоставляющего доступ к информации о пользователях по id
+end note
+backend->DB : Запрос информации о пользователе по <b>id</b>
+backend-->"frontend-accounting" : Информация о пользователе по <b>id</b>
+"frontend-accounting"-->user : Информация о пользователе по <b>id</b>
+
+@enduml
