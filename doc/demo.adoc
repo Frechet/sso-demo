@@ -7,7 +7,7 @@
 аутентификацией и доступом SSO - **Keycloak** (см. http://www.keycloak.org) и
 **CAS Enterprise Single Sign-On (CAS)** (https://github.com/apereo/cas).
 
-Рассмотрены следующие пользовательские случаи (см. `./demo-work-flow.puml`):
+Рассмотрены следующие пользовательские случаи (см. link:demo-work-flow.puml[demo-work-flow.puml]):
 
 1) Фронтенд приложение (`frontend-registration`) имеет доступ к специализированным ресурсам Бэкенда (`backend`).
 Данный случай реализован припиской особого пользователя для Фронтенда, через которого приложение ходит в Бэкенд.

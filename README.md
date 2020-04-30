@@ -4,7 +4,7 @@
 Данный прототип призван рассмотреть пользовательские
 случаи взаимодействия микросервисной архитектуры с системой управления
 аутентификацией и доступом SSO/CAS - **Keycloak** (см. http://www.keycloak.org) и
-**CAS Enterprise Single Sign-On** (https://github.com/apereo/cas). Подробное описание см. `doc/demo.adoc`.
+**CAS Enterprise Single Sign-On** (https://github.com/apereo/cas). Подробное описание см. [doc/demo.adoc](doc/demo.adoc).
 
 Рассмотрены следующие пользовательские случаи:
 
