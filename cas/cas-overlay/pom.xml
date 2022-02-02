@@ -158,7 +158,7 @@
 
     <properties>
         <pac4j.version>2.2.0</pac4j.version>
-        <postgresql.version>9.4.1212</postgresql.version>
+        <postgresql.version>42.2.25</postgresql.version>
         <cas.version>5.3.0-RC2-SNAPSHOT</cas.version>
         <springboot.version>1.5.9.RELEASE</springboot.version>
         <!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan to provide appserver -->
